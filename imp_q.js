@@ -15,3 +15,31 @@ const multiplicationTable = multi(multiTabelNumber);
 
 // console.log(multiplicationTable);
 
+
+// 2nd ==> find the 2nd largest number
+
+function secolar(numbers){
+    let largestNum = numbers[0];
+    for(i = 0; i <= numbers.length; i++){
+        let number = numbers[i];
+        if(number > largestNum){
+            largestNum = number;
+        }
+    }
+    let rmlar = numbers.pop(largestNum);
+    let seclarge = numbers[0];
+    for(i = 0; i <= numbers.length; i++){
+        let number = numbers[i];
+        if(number > seclarge){
+            seclarge = number;
+        }
+    }
+    return seclarge;
+}
+
+const arrNums = [324, 666, 232, 423, 543, 987];
+
+const secondlarge = secolar(arrNums);
+
+//  console.log(secondlarge)
+
