@@ -43,3 +43,22 @@ const secondlarge = secolar(arrNums);
 
 //  console.log(secondlarge)
 
+
+// 3rd ==> check a number prime or not prime
+
+function cheakPrime(number){
+    let isPrime;
+    for(i = 2; i < number; i++){
+        isPrime = number % i;
+        if(isPrime === 0){
+            return false;
+        } 
+    }
+    return true;
+}
+
+const numIsPri = 50;
+
+const checkNum = cheakPrime(numIsPri);
+
+// console.log(`is ${numIsPri} prime number:`, checkNum)
