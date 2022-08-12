@@ -1,6 +1,12 @@
 // 1st ==> make a multiplication table
 
 function multi(number){
+        // input error finder
+    if(typeof number !== 'number'){
+        return 'please type a number'
+    }
+    
+        // main logic
     let multiTable = [];
     for(i = 1; i <= 10; i++){
         const index = i;
@@ -19,6 +25,10 @@ const multiplicationTable = multi(multiTabelNumber);
 // 2nd ==> find the 2nd largest number
 
 function secolar(numbers){
+        // input error finder
+    if(typeof numbers !== 'object'){
+        return 'please type a list of number'
+    }
     let largestNum = numbers[0];
     for(i = 0; i <= numbers.length; i++){
         let number = numbers[i];
@@ -47,6 +57,9 @@ const secondlarge = secolar(arrNums);
 // 3rd ==> check a number prime or not prime
 
 function cheakPrime(number){
+    if(typeof number !== 'number'){
+        return 'please type a number'
+    }
     let isPrime;
     for(i = 2; i < number; i++){
         isPrime = number % i;
@@ -57,7 +70,7 @@ function cheakPrime(number){
     return true;
 }
 
-const numIsPri = 50;
+const numIsPri = 77;
 
 const checkNum = cheakPrime(numIsPri);
 
